@@ -23,6 +23,7 @@
 
     <modules>
         <module>resources-enricher</module>
+        <module>buildconfig-generator</module>
         <module>example-dsl</module>
     </modules>
 

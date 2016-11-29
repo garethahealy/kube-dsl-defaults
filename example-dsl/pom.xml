@@ -58,5 +58,10 @@
             <artifactId>resources-enricher</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.garethahealy.kube-dsl-defaults</groupId>
+            <artifactId>buildconfig-generator</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

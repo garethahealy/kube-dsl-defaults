@@ -24,19 +24,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.fabric8.kubernetes.api.builder.TypedVisitor;
 import io.fabric8.kubernetes.api.model.Container;
 import io.fabric8.kubernetes.api.model.HasMetadata;
 import io.fabric8.kubernetes.api.model.KubernetesListBuilder;
-import io.fabric8.kubernetes.api.model.PodTemplateSpecFluent;
-import io.fabric8.kubernetes.api.model.Probe;
 import io.fabric8.kubernetes.api.model.Quantity;
 import io.fabric8.kubernetes.api.model.ResourceRequirements;
 import io.fabric8.kubernetes.api.model.ResourceRequirementsBuilder;
 import io.fabric8.kubernetes.api.model.extensions.Deployment;
-import io.fabric8.kubernetes.api.model.extensions.DeploymentBuilder;
-import io.fabric8.kubernetes.api.model.extensions.DeploymentFluent;
-import io.fabric8.kubernetes.api.model.extensions.DeploymentSpecFluent;
 import io.fabric8.maven.enricher.api.BaseEnricher;
 import io.fabric8.maven.enricher.api.EnricherContext;
 
@@ -53,7 +47,7 @@ public class LimitEnricher extends BaseEnricher {
         List<HasMetadata> items = builder.getItems();
         for (HasMetadata item : items) {
             if (item instanceof Deployment) {
-                Deployment deployment = (Deployment) item;
+                Deployment deployment = (Deployment)item;
                 List<Container> containers = getCandidateContainers(deployment);
                 for (Container container : containers) {
                     if (container.getResources() == null) {

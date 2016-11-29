@@ -1,1 +1,2 @@
 com.garethahealy.kubedsldefaults.resourcesenricher.LimitEnricher
+com.garethahealy.kubedsldefaults.buildconfiggenerator.BuildConfigEnricher
