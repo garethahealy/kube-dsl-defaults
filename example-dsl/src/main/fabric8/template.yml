@@ -1,0 +1,8 @@
+---
+apiVersion: "v1"
+kind: "Template"
+metadata:
+  name: "example-dsl"
+parameters:
+- name: "IS_TAG"
+  value: "latest"
