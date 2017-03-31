@@ -4,7 +4,7 @@ echo "Deploying code signing key..."
 
 cd ./.travis || exit
 
-openssl aes-256-cbc -K "$encrypted_cfb31fcc60ec_key" -iv "$encrypted_cfb31fcc60ec_iv" -in codesigning.asc.enc -out codesigning.asc -d
+openssl aes-256-cbc -K "$encrypted_e74c689d8fd9_key" -iv "$encrypted_e74c689d8fd9_iv" -in codesigning.asc.enc -out codesigning.asc -d
 gpg --fast-import codesigning.asc
 
 cd ../ || exit
